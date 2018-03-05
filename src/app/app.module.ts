@@ -16,8 +16,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
-import { LoginPage } from '../pages/login/login';
-import { RegisterPage } from '../pages/register/register';
+
 
 
 export const environment = {
@@ -38,9 +37,8 @@ export const environment = {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
-    RegisterPage,
-    LoginPage
+    TabsPage
+
   ],
   imports: [
     BrowserModule,
@@ -54,9 +52,8 @@ export const environment = {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
-    RegisterPage,
-    LoginPage
+    TabsPage
+
   ],
   providers: [
     StatusBar,
