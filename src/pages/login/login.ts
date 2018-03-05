@@ -18,10 +18,13 @@ export class LoginPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  push(param) {
-    if (param == '1') this.navCtrl.push(RegisterPage);
+  pushpage(param:string) {
+   this.navCtrl.push(param);
 }
 
+push() {
+  this.navCtrl.push(RegisterPage);
+}
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
