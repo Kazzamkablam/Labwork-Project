@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+      <ion-buttons start>
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      </ion-buttons>
+      <ion-title>To Do List</ion-title>
+    </ion-navbar>
+  </ion-header>
+   
+  <ion-content padding>
+
+      <ul>
+          <li *ngFor="let item of items | async">
+            <input type="text" #updatetext [value]="item.text" />
+            <button (click)="updateItem(item.key, updatetext.value)">Update</button>
+            <button (click)="deleteItem(item.key)">Delete</button>
+          </li>
+        </ul>
+        <input type="text" #newitem />
+        <button (click)="addItem(newitem.value)">Add</button>
+        <button (click)="deleteEverything()">Delete All</button>
+
+        
+    (C) Juha Penttinen
+  </ion-content>

@@ -12,15 +12,29 @@
     <ion-title>login</ion-title>
   </ion-navbar>
 
-</ion-header>w
+</ion-header>
 
 
 <ion-content padding>
 
+    <ion-list>
+
+        <ion-item>
+          <ion-label floating>Username</ion-label>
+          <ion-input type="text" #username></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="text" #password></ion-input>
+        </ion-item>
+      
+      </ion-list>
+
   <div padding>
 
-      <button ion-button block (click)="pushpage('')">Log in</button>
-      <button ion-button block (click)="push('RegisterPage')">Register</button>
+      <button ion-button block (click)="signInUser()">Log in</button>
+      <button ion-button block (click)="push()">Don't have an account? Register</button>
 
   </div>
 </ion-content>
