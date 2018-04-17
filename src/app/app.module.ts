@@ -18,17 +18,18 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
-export const environment = {
+export const environment = {  //firebase configuration
   production: false,
   firebase: {
-    apiKey: 'AIzaSyA_93fpcBajU8JP6liDcd_1cd3HK0zFRYc',
+    apiKey: 'AIzaSyBai4-OpD2UNDbJdL3LGDwlecm6ppv9Zvw',
     authDomain: '<your-project-authdomain>',
-    databaseURL: 'https://labwork-4.firebaseio.com/',
-    projectId: 'labwork-4',
+    databaseURL: 'https://labwork-project.firebaseio.com/',
+    projectId: 'Labwork-Project',
     storageBucket: '<your-storage-bucket>',
     messagingSenderId: '<your-messaging-sender-id>'
   }
 };
+
 
 @NgModule({
   declarations: [

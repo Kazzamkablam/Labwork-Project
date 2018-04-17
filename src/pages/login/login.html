@@ -7,34 +7,37 @@
 
 
 <ion-header>
-
+<!-- Looks better without navbar
   <ion-navbar>
-    <ion-title>login</ion-title>
+    <ion-title>WhatIsMyTime - Login</ion-title>
   </ion-navbar>
+-->
 
 </ion-header>
 
 <!-- Juha Penttinen 1700028 Login screen html-->
-<ion-content padding>
+<ion-content class="bg-image no-scroll" padding>
 
+  <h5  class="title" style="text-align: center;">WhatIsMyTime</h5>
+  <ion-img class="logo" width="160" height="160" src="../assets/imgs/Clock.png"></ion-img>
     <ion-list>
 
-        <ion-item>
-          <ion-label floating>Username</ion-label>
+        <ion-item class="login">
+          <ion-label class="logtext" floating>Username</ion-label>
           <ion-input type="text" #username></ion-input>
         </ion-item>
       
-        <ion-item>
-          <ion-label floating>Password</ion-label>
-          <ion-input type="text" #password></ion-input>
+        <ion-item class="login">
+          <ion-label class="logtext" floating>Password</ion-label>
+          <ion-input type="password" #password></ion-input>
         </ion-item>
       
       </ion-list>
 
   <div padding>
 
-      <button ion-button block (click)="signInUser()">Log in</button> <!-- Juha Penttinen 1700028 Log in-->
-      <button ion-button block (click)="push()">Don't have an account? Register</button> <!-- Juha Penttinen 1700028 Show register page-->
+      <button class="rounded" ion-button block (click)="signInUser()">Log in</button> <!-- Juha Penttinen 1700028 Log in-->
+      <button class="rounded" ion-button block (click)="push()">Don't have an account? Register</button> <!-- Juha Penttinen 1700028 Show register page-->
 
   </div>
 </ion-content>

@@ -14,3 +14,25 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+
+
+@font-face { //custom fonts ...yay!
+    font-family: Anton;
+    src: url('../assets/fonts/Anton-Regular.ttf') format("truetype");
+}
+
+  @font-face { //custom fonts ...yay!
+    font-family: BlackHanSans;
+    src: url('../assets/fonts/BlackHanSans-Regular.ttf') format("truetype");
+}
+
+@font-face { //custom fonts ...yay!
+    font-family: Open-sans;
+    src: url('../assets/fonts/OpenSans-Regular.ttf') format("truetype");
+    
+}
+    * { //This really doesn't need to be applied for each font, once is enough to apply it globally.
+        font-family: Open-sans;
+    }
