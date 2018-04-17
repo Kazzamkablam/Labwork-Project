@@ -7,7 +7,7 @@ import { MenuPage } from '../pages/menu/menu';
 import { RegisterPage } from '../pages/register/register';
 import { LoginPage } from '../pages/login/login';
 
-import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFirestore } from 'angularfire2/firestore'; //1700028 Juha Penttinen, firebase dependencies
 import { Observable } from 'rxjs/Observable';
 
 @Component({

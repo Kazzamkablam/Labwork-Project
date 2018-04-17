@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import * as firebase from 'firebase/app';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
-//import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 
 /**
@@ -22,10 +20,14 @@ export class Tab2Page {
   itemsRef: AngularFireList<any>;
   items: Observable<any[]>;
 
+// 1700028 Juha Penttinen, Main code part for To do list
   
   constructor(public db: AngularFireDatabase, public fire: AngularFireAuth,public navCtrl: NavController, public navParams: NavParams) {
-    this.itemsRef = db.list('messages');
+    this.itemsRef = db.list(this.fire.auth.currentUser.uid);
 
+    this.items = this.itemsRef.snapshotChanges().map(changes => {
+      return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
+    });
   }
 
   addItem(newName: string) {
@@ -42,6 +44,7 @@ export class Tab2Page {
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad Tab2Page');
+    console.log(this.fire.auth.currentUser.email);
   }
 
 }

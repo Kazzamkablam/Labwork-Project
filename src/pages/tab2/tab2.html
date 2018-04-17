@@ -11,17 +11,32 @@
    
   <ion-content padding>
 
-      <ul>
-          <li *ngFor="let item of items | async">
-            <input type="text" #updatetext [value]="item.text" />
-            <button (click)="updateItem(item.key, updatetext.value)">Update</button>
-            <button (click)="deleteItem(item.key)">Delete</button>
-          </li>
-        </ul>
-        <input type="text" #newitem />
-        <button (click)="addItem(newitem.value)">Add</button>
-        <button (click)="deleteEverything()">Delete All</button>
+   <!-- 1700028 Juha Penttinen My earlier experimentations
+    <ul>
+      <li *ngFor="let item of items | async">
+        <input type="text" #updatetext [value]="item.text" />
+        <button (click)="updateItem(item.key, updatetext.value)">Update</button>
+        <button (click)="deleteItem(item.key)">Delete</button>
+      </li>
+    </ul>
+    <input type="text" #newitem />
+    <button (click)="addItem(newitem.value)">Add</button>
+    <button (click)="deleteEverything()">Delete All</button>
+  -->
+ <
+    <ion-list>
 
-        
+      <ion-item  *ngFor="let item of items | async">
+        <input type="text" #updatetext [value]="item.text" />
+        <button (click)="updateItem(item.key, updatetext.value)">Update</button>
+        <button (click)="deleteItem(item.key)">Delete</button>
+      </ion-item>
+      
+    </ion-list>
+
+    <input type="text" #newitem />
+    <button (click)="addItem(newitem.value)">Add</button>
+    <button (click)="deleteEverything()">Delete All</button> 
+    
     (C) Juha Penttinen
   </ion-content>
