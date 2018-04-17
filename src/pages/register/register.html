@@ -13,24 +13,24 @@
 </ion-header>
 
 <!-- Juha Penttinen 1700028 register page screen html-->
-<ion-content padding>
+<ion-content class="bg-image no-scroll" padding>
 
 <ion-list>
 
-  <ion-item>
-    <ion-label floating>Username</ion-label>
+  <ion-item class="login">
+    <ion-label class="inputtext" floating>Username</ion-label>
     <ion-input type="text" #username></ion-input>
   </ion-item>
 
-  <ion-item>
-    <ion-label floating>Password</ion-label>
+  <ion-item class="login">
+    <ion-label class="inputtext"floating>Password</ion-label>
     <ion-input type="text" #password></ion-input>
   </ion-item>
 
 </ion-list>
 
 <div padding>
-<button block ion-button (click)="RegisterUser()" item-left>Register</button>  
+<button class="rounded" block ion-button (click)="RegisterUser()" item-left>Register</button>  
 </div>
 
 </ion-content>
