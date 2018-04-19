@@ -9,6 +9,19 @@
     </ion-navbar>
   </ion-header>
    
-  <ion-content padding> <!-- 1700028 Juha Penttinen, home page -->
-    Welcome to this amazing project totally not created with tutorials mixed with my own code! Containing, To do list!
+  <ion-content class="bg-image no-scroll" padding> <!-- 1700028 Juha Penttinen, home page, display some data and fancy image based on time of day -->
+  <p style="text-align: center;" class="fronttext">  Current time in {{ this.mySelection.kind }} is</p>
+      
+  <p style="text-align: center;" class="watchtext">{{ timeZone() | date: 'H:mm:ss' }}</p>
+
+  <ion-img class="decoimg" width="100" height="100" src={{source()}}></ion-img>
+
+  <ion-item class="roundedlist">
+
+    <ion-select class="selectlist" interface="action-sheet" [(ngModel)]="mySelection.kind" (ionChange)='translateName(myOptions, mySelection.kind)'>
+      <ion-option *ngFor="let item of myOptions">{{item.Name}}</ion-option>
+    </ion-select>
+  </ion-item>
+  
+
   </ion-content>

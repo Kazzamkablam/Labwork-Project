@@ -49,7 +49,7 @@ $colors: (
 $toolbar-md-title-text-color: whitesmoke; //custom toolbar colours
 $toolbar-ios-title-text-color: whitesmoke;
 $toolbar-wp-title-text-color:whitesmoke;
-
+$bar-title-font-size: 15px !default;
 
 // App Material Design Variables
 // --------------------------------------------------
@@ -71,6 +71,7 @@ $toolbar-wp-title-text-color:whitesmoke;
 // then be future customized. This import comes last
 // so that the above variables are used and Ionic's
 // default are overridden.
+
 
 @import "ionic.theme.default";
 

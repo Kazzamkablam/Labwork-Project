@@ -39,9 +39,10 @@
 
     .toolbar-background { //custom toolbar color
         background: transparent;
-        background-color:rgba(255,255,255,0.05);
+        background-color:rgba(0,0,0,0.75);
         
     }
+
 
     .rounded { //rounded fancy buttons
         border-radius: 25px;
@@ -69,5 +70,24 @@
         color: whitesmoke;
         
        }
+
+       .tabs-md .tab-button { //custom tab coloring
+        color: white !important;
+       }
+       
+         //selected color
+        .tabs-md .tab-button[aria-selected=true] {
+        // color: #fce515 !important;
+        background-color: #181818;
+        }
+ 
+         .tab-button {
+           color: white !important;
+            background-color: #000000;
+          //  background:rgba(255, 255, 255,0.1);
+        }
+
+      
+
 
   

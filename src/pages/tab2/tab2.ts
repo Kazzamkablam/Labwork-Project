@@ -30,11 +30,22 @@ export class Tab2Page {
     });
   }
 
-  addItem(newName: string) {
-    this.itemsRef.push({ text: newName });
+  addItem(newName: string, newNum: number) {
+    var myObj = { 
+    "Name":newName,
+    "Zone": newNum
+    }
+    //this.itemsRef.push({ text: newName });
+    this.itemsRef.push({  myObj });
   }
-  updateItem(key: string, newText: string) {
-    this.itemsRef.update(key, { text: newText });
+  updateItem(key: string, newName: string, newNum: number) {
+    var myObj = { 
+      "Name":newName,
+      "Zone": newNum
+      }
+    //this.itemsRef.update(key, { Name: newText, Zone: newNum });
+    this.itemsRef.update(key,{ myObj });
+
   }
   deleteItem(key: string) {    
     this.itemsRef.remove(key); 

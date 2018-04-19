@@ -26,7 +26,7 @@ export class MenuPage {
  
   pages: PageInterface[] = [  //1700028 Juha Penttinen, pageinterface like in the tutorial
     { title: 'Home', pageName: 'TabsPage', tabComponent: 'Tab1Page', index: 0, icon: 'home' },
-    { title: 'To do list', pageName: 'TabsPage', tabComponent: 'Tab2Page', index: 1, icon: 'contacts' },
+    { title: 'Custom places', pageName: 'TabsPage', tabComponent: 'Tab2Page', index: 1, icon: 'add-circle' },
     { title: 'About', pageName: 'SpecialPage', icon: 'shuffle' },
   ];
  

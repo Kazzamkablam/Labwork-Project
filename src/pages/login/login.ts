@@ -37,7 +37,7 @@ export class LoginPage {
 this.fire.auth.signInWithEmailAndPassword(this.user.value, this.password.value)  // Juha Penttinen 1700028 Firebase authentication
     .then ( data => {
       console.log('got some data',this.fire.auth.currentUser.email);
-      this.alert ('Success! You\'re logged in');
+      this.alert ('Welcome. You\'re logged in');
       this.navCtrl.setRoot ( 'MenuPage' );
     })
     .catch ( error => {
